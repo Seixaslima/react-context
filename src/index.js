@@ -3,7 +3,7 @@ import { StylesProvider } from '@material-ui/core/styles';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Login from 'pages/Login';
+import AppRoute from 'routes';
 
 const theme = createTheme({
   palette: {
@@ -12,15 +12,15 @@ const theme = createTheme({
     },
     secondary: {
       main: '#FF7070'
-    },
+    }
   }
-})
+});
 
 ReactDOM.render(
   <React.StrictMode>
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <Login />
+        <AppRoute />
       </ThemeProvider>
     </StylesProvider>
   </React.StrictMode>,
